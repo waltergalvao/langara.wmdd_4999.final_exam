@@ -5,6 +5,9 @@ import { EditOutlined } from '@ant-design/icons'
 import UpdateArtist from '../forms/UpdateArtist'
 import RemoveArtist from '../buttons/RemoveArtist'
 import Instrument from './Instrument';
+import {
+    Link,
+} from "react-router-dom";
 
 const getStyles = () => ({
   card: {
@@ -65,6 +68,8 @@ const Artist = props => {
                 </List.Item>
             ))}
           </List>
+
+            <Link to={'/artists/' + id}>Learn More</Link>
         </Card>
       )}
     </List.Item>
