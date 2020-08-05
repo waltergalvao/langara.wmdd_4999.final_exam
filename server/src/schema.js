@@ -179,7 +179,7 @@ const resolvers = {
         return a.id === removedArtist.id
       });
 
-      remove(intruments, a => {
+      remove(instruments, a => {
         a.artistId === removedArtist.id
       });
 
