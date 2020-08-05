@@ -4,6 +4,7 @@ import { Card, List } from 'antd'
 import { EditOutlined } from '@ant-design/icons'
 import UpdateArtist from '../forms/UpdateArtist'
 import RemoveArtist from '../buttons/RemoveArtist'
+import Instrument from './Instrument';
 
 const getStyles = () => ({
   card: {
@@ -56,6 +57,14 @@ const Artist = props => {
           style={styles.card}
         >
           {fullName()}
+
+          <List grid={{ gutter: 20, column: 1 }} style={{...styles.list, marginTop: "20px"}}>
+            {props.instruments && props.instruments.map(({ id, year, brand, type, price, artistId}) => (
+                <List.Item key={id}>
+                  <Instrument id={id} year={year} brand={brand} type={type} price={price} artistId={artistId}/>
+                </List.Item>
+            ))}
+          </List>
         </Card>
       )}
     </List.Item>

@@ -21,9 +21,9 @@ const Artists = () => {
   if (error) return `Errror! ${error.message}`
   return (
     <List grid={{ gutter: 20, column: 1 }} style={styles.list}>
-      {data.artists.map(({ id, firstName, lastName }) => (
+      {data.artists.map(({ id, firstName, lastName, instruments }) => (
         <List.Item key={id}>
-          <Artist key={id} id={id} firstName={firstName} lastName={lastName} />
+          <Artist key={id} id={id} firstName={firstName} lastName={lastName} instruments={instruments}/>
         </List.Item>
       ))}
     </List>

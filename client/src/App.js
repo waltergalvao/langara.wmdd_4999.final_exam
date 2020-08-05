@@ -10,6 +10,7 @@ import AddArtist from './components/forms/AddArtist'
 
 import './App.css'
 import Artists from './components/lists/Artists'
+import AddInstrument from "./components/forms/AddInstrument";
 
 const { Content } = Layout
 
@@ -24,6 +25,7 @@ const App = () => (
       <Content className='App'>
         <Title />
         <AddArtist />
+        <AddInstrument/>
         <Artists />
       </Content>
     </div>
